@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  aws_eks_sshd:
+      image: secuof/for_eks:latest
+      container_name: aws_eks_sshd
+      command: /usr/sbin/sshd -D
+      ports:
+        - '222:22'
+      expose:
+        - '222'
